@@ -94,7 +94,7 @@ int i,j,k,aux;
 		if(dados_p[i][0] == aux){
 			j++; //contabiliza quantos planetas tem a mesma distancia
 			if(i= num_planetas-1){ //se forem os planetas até o final dos dados ele arruma até o final
-				quicksort2(k,j+k);
+				quicksort2(k,k+j);
 			}
 		} else {
 			if(j>1){
