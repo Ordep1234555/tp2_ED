@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <chrono>
 #include "string.h"
 
 using namespace std;
@@ -49,10 +50,10 @@ i = inicio;
 j = fim-1;
 pivo = dados_p[(inicio + fim)/2][1];
 	while(i <= j){
-		while(dados_p[i][1] < pivo && i < fim){
+		while(dados_p[i][1] > pivo && i < fim){
 			i++;
 		}
-		while(dados_p[j][1] > pivo && j > inicio){
+		while(dados_p[j][1] < pivo && j > inicio){
 			j--;
 		}
 		if(i <= j){
@@ -85,6 +86,8 @@ int i,j,k,aux;
 	for (i = 0; i < num_planetas; i++){
 		cin >> nome_p[i] >> dados_p[i][0] >> dados_p[i][1];
         }
+	auto start = chrono::high_resolution_clock::now(); 
+	ios_base::sync_with_stdio(false);
 	quicksort(0,num_planetas);
 	aux=dados_p[0][0];
 	for(i=1,k=0,j=1; i<num_planetas; i++){
@@ -102,10 +105,14 @@ int i,j,k,aux;
 			j=1;
 		}
 	}
+	auto end = chrono::high_resolution_clock::now();
 	cout << endl << "-------------------------------------------------------------------------------------" << endl;
 	for (int i = 0; i < num_planetas; i++) {
         cout << nome_p[i] + " " + to_string(dados_p[i][0]) + " " + to_string(dados_p[i][1]) << endl;
     	}
+	double time_taken =  chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+	time_taken *= 1e-9;
+	cout << fixed  << time_taken << setprecision(9);
   
   return 0;
 }
