@@ -112,7 +112,7 @@ int i,j,k,aux;
     	}
 	double time_taken =  chrono::duration_cast<chrono::nanoseconds>(end - start).count();
 	time_taken *= 1e-9;
-	cout << fixed  << time_taken << setprecision(9);
+	cout << fixed  << time_taken;
   
   return 0;
 }
