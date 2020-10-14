@@ -1,6 +1,6 @@
 # tp2_ED
 
-Trabalho Pratico 1 de Estrutura de Dados
+Trabalho Pratico 2 de Estrutura de Dados
 
 UFMG - Universidade Federal de Minas Gerais
 
