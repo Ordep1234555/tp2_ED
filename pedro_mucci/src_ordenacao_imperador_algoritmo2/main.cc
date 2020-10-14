@@ -18,15 +18,15 @@ void selecao(int num_planetas){
         if (dados_p[j][0] < dados_p[Min][0])
         Min = j;
         }
-            aux[0][0] = dados_p[i][0];
-			aux[0][1] = dados_p[i][1];
-			aux_p = nome_p[i];
-			dados_p[i][0] = dados_p[Min][0];
-			dados_p[i][1] = dados_p[Min][1];
-			nome_p[i] = nome_p[Min];
-			dados_p[Min][0] = aux[0][0];
-			dados_p[Min][1] = aux[0][1];
-			nome_p[Min] = aux_p;
+        aux[0][0] = dados_p[i][0];
+	aux[0][1] = dados_p[i][1];
+	aux_p = nome_p[i];
+	dados_p[i][0] = dados_p[Min][0];
+	dados_p[i][1] = dados_p[Min][1];
+	nome_p[i] = nome_p[Min];
+	dados_p[Min][0] = aux[0][0];
+	dados_p[Min][1] = aux[0][1];
+	nome_p[Min] = aux_p;
     }
 }
 
@@ -40,15 +40,15 @@ void selecao2(int inicio, int fim){
         if (dados_p[j][1] > dados_p[Max][1])
         Max = j;
         }
-            aux[0][0] = dados_p[i][0];
-			aux[0][1] = dados_p[i][1];
-			aux_p = nome_p[i];
-			dados_p[i][0] = dados_p[Max][0];
-			dados_p[i][1] = dados_p[Max][1];
-			nome_p[i] = nome_p[Max];
-			dados_p[Max][0] = aux[0][0];
-			dados_p[Max][1] = aux[0][1];
-			nome_p[Max] = aux_p;
+        aux[0][0] = dados_p[i][0];
+	aux[0][1] = dados_p[i][1];
+	aux_p = nome_p[i];
+	dados_p[i][0] = dados_p[Max][0];
+	dados_p[i][1] = dados_p[Max][1];
+	nome_p[i] = nome_p[Max];
+	dados_p[Max][0] = aux[0][0];
+	dados_p[Max][1] = aux[0][1];
+	nome_p[Max] = aux_p;
     }
 }
 
